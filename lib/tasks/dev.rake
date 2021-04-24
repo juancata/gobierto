@@ -1,5 +1,36 @@
 # frozen_string_literal: true
 
+namespace :test do
+  modules = %w{
+    gobierto_admin
+    gobierto_attachments
+    gobierto_budgets
+    gobierto_calendars
+    gobierto_cms gobierto_common
+    gobierto_core
+    gobierto_dashboards
+    gobierto_data
+    gobierto_exports
+    gobierto_indicators
+    gobierto_investments
+    gobierto_observatory
+    gobierto_people
+    gobierto_plans
+    gobierto_visualizations
+    gobierto_others
+    gobierto_engines
+  }
+
+  modules.each do |mod|
+    desc "run test for module #{mod}.safe_constantize"
+    task "#{mod}".to_sym do
+      files = `find test -path '*#{mod}*' -name '*_test.rb' | grep -v '#{mod}\/gobierto_'`.gsub("\n"," ")
+      puts `bin/rails test #{files}`
+    end
+  end
+end
+
+
 namespace :dev do
 
   # bin/rails dev:load_data[staging]
