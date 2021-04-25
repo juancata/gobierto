@@ -12,7 +12,6 @@ require "spy/integration"
 require "webmock/minitest"
 require "support/common_helpers"
 require "support/contexts"
-require "support/drivers"
 require "support/session_helpers"
 require "support/site_session_helpers"
 require "support/app_host_helpers"
@@ -98,7 +97,7 @@ class ActionDispatch::IntegrationTest
   include GobiertoPeople::SubmodulesHelper
 
   Capybara.configure do |config|
-    config.javascript_driver = (ENV["INTEGRATION_TEST_DRIVER"] || :headless_chrome).to_sym
+    config.javascript_driver = (ENV["INTEGRATION_TEST_DRIVER"] || :selenium_chrome_headless).to_sym
     config.default_host = "http://gobierto.test"
     config.default_max_wait_time = 10
   end
