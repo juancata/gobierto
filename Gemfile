@@ -112,7 +112,7 @@ group :development, :test do
   gem "byebug", platform: :mri
   gem "i18n-tasks"
   gem "spring"
-  gem "puma"
+  gem "puma", ">= 5.3.1"
 end
 
 group :test do
