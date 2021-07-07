@@ -10,7 +10,7 @@ gem "dalli"
 gem "hashie"
 gem "ine-places", "0.3.0"
 gem "jbuilder", "~> 2.5"
-gem "mechanize"
+gem "mechanize", ">= 2.8.1"
 gem "meta-tags"
 gem "paper_trail"
 gem "paranoia"
@@ -66,7 +66,7 @@ gem "redis", "~> 4.0"
 
 # Translations
 gem "json_translate", "~> 4.0"
-gem "route_translator"
+gem "route_translator", ">= 10.0.0"
 
 # Liquid
 gem "liquid", "~> 4.0"
@@ -74,7 +74,7 @@ gem "liquid-rails", git: "https://github.com/maierru/liquid-rails.git"
 
 # Google API
 gem "geocoder"
-gem "google-api-client"
+gem "google-api-client", ">= 0.53.0"
 
 # Microsoft Exchange calendars
 gem "exchanger"
@@ -116,11 +116,11 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara"
-  gem "capybara-email"
+  gem "capybara", ">= 3.35.3"
+  gem "capybara-email", ">= 3.0.2"
   gem "simplecov"
   gem "simplecov-cobertura"
-  gem "launchy"
+  gem "launchy", ">= 2.5.0"
   gem "minitest"
   gem "minitest-reporters"
   gem "minitest-retry"
@@ -132,7 +132,7 @@ group :test do
   gem "spy"
   gem "timecop"
   gem "vcr"
-  gem "webmock"
+  gem "webmock", ">= 3.13.0"
 end
 
 group :development do
