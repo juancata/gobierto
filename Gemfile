@@ -15,7 +15,7 @@ gem "meta-tags"
 gem "paper_trail"
 gem "paranoia"
 gem "pg", "~> 1.1"
-gem "rails", "~> 6.0"
+gem "rails", "~> 6.0", ">= 6.0.4.1"
 gem "redcarpet", require: true
 gem "responders"
 gem "rollbar"
@@ -47,7 +47,7 @@ gem "aws-sdk-s3", "~> 1"
 gem "aws-ses", git: "https://github.com/zebitex/aws-ses.git", ref: "78-sigv4-problem"
 
 # Calendar view component
-gem "simple_calendar", "~> 2.2"
+gem "simple_calendar", "~> 2.4", ">= 2.4.1"
 
 # Search client
 gem "pg_search", "2.3.5"
@@ -59,7 +59,7 @@ gem "rails-html-sanitizer"
 gem "kaminari", "~> 1.2"
 
 # Captcha
-gem "invisible_captcha"
+gem "invisible_captcha", ">= 1.1.0"
 
 # Redis
 gem "redis", "~> 4.0"
