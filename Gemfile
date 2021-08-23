@@ -2,22 +2,22 @@
 
 source "https://rubygems.org"
 
-gem "actionpack-action_caching"
-gem "active_model_serializers"
+gem "actionpack-action_caching", ">= 1.2.2"
+gem "active_model_serializers", ">= 0.10.12"
 gem "bcrypt", "~> 3.1.0"
-gem "cookies_eu"
+gem "cookies_eu", ">= 1.7.7"
 gem "dalli"
 gem "hashie"
 gem "ine-places", "0.3.0"
 gem "jbuilder", "~> 2.5"
 gem "mechanize"
-gem "meta-tags"
+gem "meta-tags", ">= 2.14.0"
 gem "paper_trail"
 gem "paranoia"
 gem "pg", "~> 1.1"
-gem "rails", "~> 6.0"
+gem "rails", "~> 6.0", ">= 6.0.4.1"
 gem "redcarpet", require: true
-gem "responders"
+gem "responders", ">= 3.0.1"
 gem "rollbar"
 gem "ruby_px"
 gem "before_renders"
@@ -30,7 +30,7 @@ gem "i18n-js", ">= 3.0.0.rc11" # required to i18n-tasks
 gem "font-awesome-sass", "~> 5.6" # required until FA moved to npm
 
 # Webpack
-gem "webpacker", "~> 5.0"
+gem "webpacker", "~> 5.4", ">= 5.4.0"
 
 # Elasticsearch
 gem "elasticsearch", "~> 6.0", ">= 6.0.2"
@@ -47,7 +47,7 @@ gem "aws-sdk-s3", "~> 1"
 gem "aws-ses", git: "https://github.com/zebitex/aws-ses.git", ref: "78-sigv4-problem"
 
 # Calendar view component
-gem "simple_calendar", "~> 2.2"
+gem "simple_calendar", "~> 2.4", ">= 2.4.1"
 
 # Search client
 gem "pg_search", "2.3.5"
@@ -59,14 +59,14 @@ gem "rails-html-sanitizer"
 gem "kaminari", "~> 1.2"
 
 # Captcha
-gem "invisible_captcha"
+gem "invisible_captcha", ">= 1.1.0"
 
 # Redis
 gem "redis", "~> 4.0"
 
 # Translations
 gem "json_translate", "~> 4.0"
-gem "route_translator"
+gem "route_translator", ">= 10.0.0"
 
 # Liquid
 gem "liquid", "~> 4.0"
@@ -110,7 +110,7 @@ gem 'rack-rewrite'
 
 group :development, :test do
   gem "byebug", platform: :mri
-  gem "i18n-tasks"
+  gem "i18n-tasks", ">= 0.9.34"
   gem "spring"
   gem "puma"
 end
